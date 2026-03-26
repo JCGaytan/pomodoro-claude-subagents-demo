@@ -5,10 +5,23 @@ function nextSession() {
   if (state === "focus") {
     state = "break";
   } else {
-    state = "break"; // ❌ BUG
+    state = "focus";
   }
 
   return { state, sessions };
 }
 
-module.exports = { nextSession };
+function getState() {
+  return { state, sessions };
+}
+
+function getSessionCount() {
+  return sessions;
+}
+
+function reset() {
+  state = "focus";
+  sessions = 0;
+}
+
+module.exports = { nextSession, getState, getSessionCount, reset };
