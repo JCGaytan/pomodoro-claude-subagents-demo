@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Timer mode (focus / break) */
+#mode {
+  font-size: 2.5rem;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 200px;
+}
+
+/* Focus mode */
+.focus {
+  background-color: #22c55e;
+}
+
+/* Break mode */
+.break {
+  background-color: #3b82f6;
+}
+
+/* Button */
+button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f59e0b;
+  color: black;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #d97706;
+}
+
+/* Session counter */
+#sessions {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}

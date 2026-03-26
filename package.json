@@ -1,0 +1,27 @@
+{
+  "name": "pomodoro-agents-demo",
+  "version": "1.0.0",
+  "description": "Simple Pomodoro app for demonstrating AI agent workflows",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "pomodoro",
+    "node",
+    "express",
+    "ai-agents",
+    "demo"
+  ],
+  "author": "Sergio Fernandez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
