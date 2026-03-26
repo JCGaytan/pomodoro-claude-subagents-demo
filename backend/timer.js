@@ -6,6 +6,7 @@ function nextSession() {
     state = "break";
   } else {
     state = "focus";
+    sessions++;
   }
 
   return { state, sessions };
