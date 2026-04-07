@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la *.config.js)",
+      "Bash(ls -la jest.config.*)",
+      "Bash(chmod +x:*)",
+      "Bash(bash:*)",
+      "Bash(npm test:*)",
+      "Bash(cat .claude/logs/session-*.log)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/change-logger.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

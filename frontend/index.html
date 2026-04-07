@@ -1,8 +1,72 @@
-<h1>Pomodoro</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer - Fixed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🍅 Pomodoro Timer</h1>
+            <p class="subtitle">Stay focused, take breaks, be productive</p>
+        </header>
 
-<div id="mode">focus</div>
-<button onclick="next()">Next</button>
+        <!-- Mode Tabs -->
+        <div class="mode-tabs">
+            <div class="mode-tab active" data-mode="focus">Focus</div>
+            <div class="mode-tab" data-mode="break">Break</div>
+        </div>
 
-<div>Sessions: <span id="count">0</span></div>
+        <!-- Timer Display -->
+        <div class="timer-card" id="timerCard">
+            <div class="timer-display" id="timer">25:00</div>
+            <div class="timer-label" id="timerLabel">Ready to focus?</div>
+        </div>
 
-<script src="app.js"></script>
+        <!-- Current State Badge -->
+        <div class="state-badge" id="mode">focus</div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="btn-primary" id="nextBtn" onclick="next()">
+                <span class="btn-icon">▶</span>
+                <span class="btn-text">Start Session</span>
+            </button>
+        </div>
+
+        <!-- Session Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">✓</div>
+                <div class="stat-value" id="count">0</div>
+                <div class="stat-label">Sessions Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏱</div>
+                <div class="stat-value" id="focusTime">0</div>
+                <div class="stat-label">Minutes Focused</div>
+            </div>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-section">
+            <div class="progress-label">Today's Progress</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0 / 4 sessions</div>
+        </div>
+
+        <!-- Status Message -->
+        <div class="status-message" id="statusMessage">
+            Click "Start Session" to begin your first focus session
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
